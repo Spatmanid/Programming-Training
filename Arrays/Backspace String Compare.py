@@ -24,3 +24,10 @@ def backSpaceCompare(S, T):
 		return ''.join(stack)
 	
 	return buildString(S) == buildString(T)
+
+def main():
+	S, T = 'aa#bcd#', 'a#abce#d#g#'
+	print(backSpaceCompare(S, T))
+
+if __name__ == "__main__":
+	main()
