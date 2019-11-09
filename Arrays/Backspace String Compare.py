@@ -33,7 +33,6 @@
 # space complexity of O(m + n).
 
 def backSpaceCompare(S, T):
-	
 	def buildString(s):
 		stack = []
 		for c in s:
@@ -42,7 +41,6 @@ def backSpaceCompare(S, T):
 			elif stack:
 				stack.pop()
 		return ''.join(stack)
-	
 	return buildString(S) == buildString(T)
 
 def main():
