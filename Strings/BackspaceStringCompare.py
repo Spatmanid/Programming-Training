@@ -32,20 +32,22 @@
 # This solution has time complexity of O(m + n), where m, n are the lengths of S and T respectively, and
 # space complexity of O(m + n).
 
-def backSpaceCompare(S, T):
-	def buildString(s):
-		stack = []
-		for c in s:
-			if c != '#':
-				stack.append(c)
-			elif stack:
-				stack.pop()
-		return ''.join(stack)
-	return buildString(S) == buildString(T)
+class Solution:
+    def backSpaceCompare(self, S, T):
+        def buildString(s):
+            stack = []
+            for c in s:
+                if c != '#':
+                    stack.append(c)
+                elif stack:
+                    stack.pop()
+            return ''.join(stack)
+        return buildString(S) == buildString(T)
 
 def main():
-	S, T = 'aa#bcd#', 'a#abce#d#g#'
-	print(backSpaceCompare(S, T))
+    sol = Solution()
+    S, T = 'aa#bcd#', 'a#abce#d#g#'
+    print(sol.backSpaceCompare(S, T))
 
 if __name__ == "__main__":
-	main()
+    main()
