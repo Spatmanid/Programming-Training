@@ -49,7 +49,7 @@ class FloydWarshall:
 		return
 		
 def main():
-    graph = [[0, 3, 6, 15],
+    graph = [[0, 3, 7, 15],
          [float('inf'), 0, -2, float('inf')],
          [float('inf'), float('inf'), 0, 2],
          [1, float('inf'), float('inf'), 0]]
