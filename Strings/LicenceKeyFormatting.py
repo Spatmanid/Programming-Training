@@ -30,7 +30,7 @@
 # 4. Canonical adrress = local + '@' + domain
 #
 # Complexity Analysis
-# This solution has time complexity of O(C), where C is the total content of emails, and space complexity of O(C).
+# This solution has time complexity of O(C), where C is the total content of the licence key, and space complexity of O(1).
 
 class Solution:
     def licenceKeyFormatting2(S, K):
