@@ -1,6 +1,6 @@
-# Welcome to my interview repository!
+# Welcome to my Programming repository!
 
-My name is Spyros. I recently received my PhD in Electrical and Computer Engineering from the National Technical University of Athens, Greece. In this repository, I will try to upload all the problems that I solved during my preparation for software engineer interviews.
+My name is Spyros. I recently received my PhD in Electrical and Computer Engineering from the National Technical University of Athens, Greece. In this repository, I will try to upload all the problems that I solved during my preparation for software engineer interviews and programming contests.
 
 # Contribute
 
