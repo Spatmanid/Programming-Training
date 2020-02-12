@@ -64,3 +64,17 @@ class Solution:
 				del hashMap[tree[index]]
 			max_len = max(max_len, r - l)
 		return max_len
+
+def main():
+    sol = Solution()
+    A = [1,2,1]
+    print(sol.tatalFruit(A))
+    A = [0,1,2,2]
+    print(sol.tatalFruit(A))
+    A = [1,2,3,2,2]
+    print(sol.tatalFruit(A))
+    A = [3,3,3,1,2,1,1,2,3,3,4]
+    print(sol.tatalFruit(A))
+    
+if __name__ == "__main__":
+  main()
