@@ -73,4 +73,4 @@ def main():
     print(sol.kClosestHeap(points, K))
     
 if __name__ == "__main__":
-  main()
+    main()
