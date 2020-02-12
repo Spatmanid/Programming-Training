@@ -47,23 +47,23 @@
 # Maintain a hashmap where we keep the index of the last position we spotted r.
 
 class Solution:
-	def totalFruit(self, tree: List[int]) -> int:
-		if tree == None:
-			return 0
-		elif len(tree) <= 2:
-			return len(tree)
-		N, K = len(tree), 2
-		hashMap, l, r, max_len = {}, 0, 0, 1
-		while r < N:
-			if len(hashMap) <= K:
-				hashMap[tree[r]] = r
-				r += 1
-			if len(hashMap) > K:
-				index = min(hashMap.values())
-				l = index + 1
-				del hashMap[tree[index]]
-			max_len = max(max_len, r - l)
-		return max_len
+    def totalFruit(self, tree: List[int]) -> int:
+        if tree == None:
+            return 0
+        elif len(tree) <= 2:
+            return len(tree)
+        N, K = len(tree), 2
+        hashMap, l, r, max_len = {}, 0, 0, 1
+        while r < N:
+            if len(hashMap) <= K:
+                hashMap[tree[r]] = r
+                r += 1
+            if len(hashMap) > K:
+                index = min(hashMap.values())
+                l = index + 1
+                del hashMap[tree[index]]
+            max_len = max(max_len, r - l)
+        return max_len
 
 def main():
     sol = Solution()
