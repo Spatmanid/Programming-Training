@@ -89,3 +89,15 @@ class Solution:
             higher[i] = lower[next_higher[i]]
             lower[i] = higher[next_lower[i]]
         return sum(higher)
+
+def main():
+    sol = Solution()
+    A = [10,13,12,14,15]
+    print(sol.oddEvenJumps(A))
+    A = [2,3,1,1,4]
+    print(sol.oddEvenJumps(A))
+    A = [5,1,3,4,2]
+    print(sol.oddEvenJumps(A))
+    
+if __name__ == "__main__":
+    main()
