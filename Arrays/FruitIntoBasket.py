@@ -77,4 +77,4 @@ def main():
     print(sol.tatalFruit(A))
     
 if __name__ == "__main__":
-  main()
+    main()
