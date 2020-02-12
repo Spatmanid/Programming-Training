@@ -45,3 +45,13 @@ class Solution:
             res += '-' + S[s1:s1+K]
             s1 += K
         return res
+
+def main():
+    sol = Solution()
+    S, K = "5F3Z-2e-9-w", 4
+    print(sol.licenceKeyFormatting2(S, K))
+    S, K = "2-5g-3-J", 2
+    print(sol.licenceKeyFormatting2(S, K))
+    
+if __name__ == "__main__":
+    main()
