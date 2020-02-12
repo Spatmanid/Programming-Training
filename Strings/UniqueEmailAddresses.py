@@ -19,6 +19,11 @@
 #   All local and domain names are non-empty.
 #   Local names do not start with a '+' character.
 #
+# Example 1:
+# Input: ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
+# Output: 2
+# Explanation: "testemail@leetcode.com" and "testemail@lee.tcode.com" actually receive mails
+#
 # Solution
 # 1. Seperate the email addresses into local and domain part
 # 2. If local has the character '+' remove it along with everything beyond it
@@ -36,3 +41,11 @@ class Solution:
             res = local.split('+')[0].replace('.', '') + '@' + domain
             unique.add(res)
         return len(unique)
+
+def main():
+    sol = Solution()
+    emails = ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
+    print(sol.numUniqueEmails(emails))
+    
+if __name__ == "__main__":
+    main()
