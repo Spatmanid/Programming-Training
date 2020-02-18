@@ -45,6 +45,10 @@
 # Solution
 # Perform a sliding window keeping the loop invariant that l will be the smallest index for which [l, r] is a valid subarray.
 # Maintain a hashmap where we keep the index of the last position we spotted r.
+#
+# Complexity Analysis
+# Time Complexity: O(N). Index j will iterate N times.
+# Space Complexity: O(min(M,N)).
 
 class Solution:
     def totalFruit(self, tree: List[int]) -> int:
