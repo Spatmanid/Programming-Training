@@ -20,6 +20,10 @@
 # elements to the left of this suffix. We look at the element at the left of the suffix. We call this element pivot. The pivot 
 # is necessarily less than the head of the suffix. Next, we swap the pivot with the smallest element in the suffix that is greater
 # than the pivot. As a result the prefix is now minimized. Finally, we reverse the suffix. Now we have the next permutation.
+#
+# Complexity Analysis
+# Time Complexity: O(N). In the worst case, only two scans of the whole array are needed
+# Space Complexity: O(1). No extra space is being used. In-place replacements are done.
 
 class Solution:
     def nextPermutation(self, nums: List[int]) -> None:
