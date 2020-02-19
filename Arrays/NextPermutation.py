@@ -1,8 +1,8 @@
-# Date 12/02/2020
+# Date 18/02/2020
 # @author Spyros Patmanidis
 #
 # References
-# https://leetcode.com/problems/fruit-into-baskets/
+# https://leetcode.com/problems/next-permutation/
 #
 ############### Next Permutation ###############
 # Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.
@@ -39,3 +39,19 @@ class Solution:
                 j -= 1
             nums[i-1], nums[j] = nums[j], nums[i-1]
             nums[i:] = reversed(nums[i:])
+            
+def main():
+    sol = Solution()
+    nums = [1,2,3]
+    sol.nextPermutation(nums)
+    print(nums)
+    nums = [3,2,1]
+    sol.nextPermutation(nums)
+    print(nums)
+    nums = [1,1,5]
+    sol.nextPermutation(nums)
+    print(nums)
+   
+    
+if __name__ == "__main__":
+    main()
