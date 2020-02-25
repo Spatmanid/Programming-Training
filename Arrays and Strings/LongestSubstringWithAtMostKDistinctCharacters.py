@@ -23,7 +23,7 @@
 #
 # Complexity Analysis
 # Time Complexity: O(N). Index r will iterate N times.
-# Space Complexity: O(1).
+# Space Complexity: O(k). The dictionary will have at most k items.
 
 class Solution:
     def longestSub(self, s, k) -> int:
