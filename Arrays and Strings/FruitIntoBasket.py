@@ -72,13 +72,13 @@ class Solution:
 def main():
     sol = Solution()
     A = [1,2,1]
-    print(sol.tatalFruit(A))
+    print(sol.totalFruit(A))
     A = [0,1,2,2]
-    print(sol.tatalFruit(A))
+    print(sol.totalFruit(A))
     A = [1,2,3,2,2]
     print(sol.tatalFruit(A))
     A = [3,3,3,1,2,1,1,2,3,3,4]
-    print(sol.tatalFruit(A))
+    print(sol.totalFruit(A))
     
 if __name__ == "__main__":
     main()
