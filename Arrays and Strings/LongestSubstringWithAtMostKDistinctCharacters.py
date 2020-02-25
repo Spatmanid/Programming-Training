@@ -4,7 +4,7 @@
 # References
 # https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/
 #
-############### Longest substring with at most two distinct characters ###############
+############### Longest substring with at most k distinct characters ###############
 # Given a string s , find the length of the longest substring t that contains at most k distinct characters.
 #
 # Example 1:
