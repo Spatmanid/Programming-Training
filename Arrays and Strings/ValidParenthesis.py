@@ -30,6 +30,10 @@
 # Example 5:
 # Input: "{[]}"
 # Output: true
+#
+# Complexity Analysis
+# Time Complexity: O(n)
+# Space Complexity: O(n)
 
 class Solution:
     def isValid(self, s: str) -> bool:
