@@ -15,8 +15,8 @@
 # Explanation: 342 + 465 = 807.
 #
 # Complexity Analysis
-# Time Complexity: O(N). Index r will iterate N times.
-# Space Complexity: O(1).
+# Time Complexity: O(max(m, n)), where m is the length of l1 and n is the length of l2.
+# Space Complexity: O(max(m, n)). The length of the new list is at most max⁡(m,n) + 1.
 
 class ListNode:
     def __init__(self, x):
