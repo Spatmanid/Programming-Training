@@ -32,13 +32,12 @@
 #    seats contains only 0s or 1s, at least one 0, and at least one 1.
 #
 # Solution:
-# Sort the intervals in ascending order based on their start time.
-# For each meeting time examine if the current meeting starts after the previous one.
-# If any meeting has to start before the previous meeting return False.
+# In a group of k adjacent empty seats, the maximum distance between two people is (k+1) div 2.
+# Corner case: the distance of a person for the edge of a row.
 #
 # Complexity Analysis
-# Time Complexity: O(N logN).
-# Space Complexity: O(1).
+# Time Complexity: O(N).
+# Space Complexity: O(N).
 
 import itertools
 class Solution:
