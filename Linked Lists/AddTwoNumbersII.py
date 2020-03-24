@@ -16,8 +16,9 @@
 # Output: 7 -> 8 -> 0 -> 7
 #
 # Complexity Analysis
-# Time Complexity: O(N). Index r will iterate N times.
-# Space Complexity: O(1).
+# Time Complexity: O(max(m, n)), where m is the length of l1 and n is the length of l2. Reversing each list can be done in 
+# linear time.
+# Space Complexity: O(max(m, n)). The length of the new list is at most max⁡(m,n) + 1. The reverse operation need O(1) space.
 
 class ListNode:
     def __init__(self, x):
