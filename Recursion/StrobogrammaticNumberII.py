@@ -11,6 +11,10 @@
 # Example:
 # Input: n = 2
 # Output: ["11","69","88","96"]
+#
+# Complexity Analysis
+# Time Complexity: O(5^n), every recursive call will have 5 different result for every string.
+# Space Complexity: O(n/2 + 5^(n/2)).
 
 class Solution:
     def findStrobogrammatic(self, n:int):
