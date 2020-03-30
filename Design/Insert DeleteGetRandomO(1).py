@@ -50,7 +50,7 @@ class RandomizedSet:
         """
         Inserts a value to the set. Returns true if the set did not already contain the specified element.
         """
-        if val not in hashMap:
+        if val not in self.hashMap:
             self.hashMap[val] = len(self.values)
             self.values.append(val)
             return True
@@ -73,7 +73,7 @@ class RandomizedSet:
         """
         Get a random element from the set.
         """
-        return self.values[random.randint(0, len(self.values)-1)]
+        return choice(self.values)
 
 # Your RandomizedSet object will be instantiated and called as such:
 # obj = RandomizedSet()
