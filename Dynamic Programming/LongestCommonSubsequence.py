@@ -37,7 +37,6 @@
 # Space: O(m * n).
 
 class Solution:
-    class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
         if not text1 or not text2: return 0
         M, N = len(text1), len(text2)
