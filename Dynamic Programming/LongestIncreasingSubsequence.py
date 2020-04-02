@@ -19,6 +19,10 @@
 #     Your algorithm should run in O(n^2) complexity.
 # 
 # Follow up: Could you improve it to O(n logn) time complexity?
+#
+# Compexity Analysis
+# Time Complexity: O(n^2) and O(n logn)
+# Space Complexity: O(n)
 
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
