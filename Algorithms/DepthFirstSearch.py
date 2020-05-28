@@ -14,7 +14,7 @@
 # of vertices in the graph and E is the number of edges in the graph. 
 # The space complexity is O(V).
 
-from collections import defaultdict, deque
+from collections import defaultdict
 class Solution:
   def __init__(self):
     self.graph = defaultdict(list)
