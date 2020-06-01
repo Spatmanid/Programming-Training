@@ -1,8 +1,8 @@
-# Date 11/02/2020
+# Date 02/06/2020
 # @author Spyros Patmanidis
 #
 #
-# Kosaraju's Algorithm Algorithm
+# Tarjan's Algorithm Algorithm
 #
 # Tarjan's algorithm is an algorithm in graph theory for finding the strongly connected components 
 # of a directed graph. It runs in linear time, matching the time bound for alternative methods 
