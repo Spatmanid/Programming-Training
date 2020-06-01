@@ -60,8 +60,6 @@ class Graph:
                 cc = str(top) + '-' + cc
             self.res.append(cc.rstrip('-'))
         
-                
-    
 def main():
     edges = [[0,1], [1,2], [2,0], [1,3], [3,4], [4,5], [5,3], [6,5], [6,7], [7,8], [8,9], [9,6], [9,10]]
     g = Graph()
