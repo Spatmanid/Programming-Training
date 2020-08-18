@@ -19,21 +19,26 @@ class Solution:
       self.merge(A, start, mid, end)
     
   def merge(self, A, start, mid, end):
-    n = mid - start + 1
-    m = end - mid
-    L = [A[start+i] for i in range(n)]
-    R = [A[mid+1+j] for j in range(m)]
-    i, j, k = 0, 0, start
-    while i < n and j < m:
+    L = list(A[start:mid+1])
+    R = list(A[mid+1:end+1])
+    i = j = 0
+    k = start
+    while i < len(L) and j < len(R):
       if L[i] <= R[j]:
-        A[k] = L[i]; i += 1
+        A[k] = L[i]
+          i += 1
       else:
-        A[k] = R[j]; j += 1
+        A[k] = R[j]
+          j += 1
+      k += 1  
+    while i < len(L):
+      A[k] = L[i]
+      i += 1
       k += 1
-    while i < n:
-      A[k] = L[i]; i += 1; k += 1
-    while j < m:
-      A[k] = R[j]; j += 1; k += 1    
+    while j < len(R):
+      A[k] = R[j]
+      j += 1
+      k += 1
     
 def main():
   sol = Solution()
