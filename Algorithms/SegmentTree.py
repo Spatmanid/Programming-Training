@@ -31,16 +31,13 @@
 # Time complexity to search in segment tree is Ο(log𝑛) since you would at max travel 4 depths. 
 # Time complexity to update in segment tree is Ο(log𝑛). Time complexity to update range in segment tree is Ο(𝑟𝑎𝑛𝑔𝑒).
 
-import math
+from math import ceil, log2
 class sumSegmentTree:
     def __init__(self, arr):
-        N = self.nextPowerOf2(len(arr))
+        N = 1 if x == 0 else 2 ** ceil(log2(len(arr))
         self.segmentTree = [0] * (2 * N - 1)
         self.constructTree(arr, 0, len(arr)-1, 0)
     
-    def nextPowerOf2(self, x):
-        return 1 if x == 0 else 2**math.ceil(math.log2(x))
-
     def constructTree(self, arr, low, high, pos):
         if low == high:
             self.segmentTree[pos] = arr[low]
@@ -62,12 +59,9 @@ class sumSegmentTree:
     
 class minSegmentTree:
     def __init__(self, arr):
-        N = self.nextPowerOf2(len(arr))
+        N = 1 if x == 0 else 2 ** ceil(log2(len(arr))
         self.segmentTree = [float('inf')] * (2 * N - 1)
         self.constructTree(arr, 0, len(arr)-1, 0)
-    
-    def nextPowerOf2(self, x):
-        return 1 if x == 0 else 2**math.ceil(math.log2(x))
 
     def constructTree(self, arr, low, high, pos):
         if low == high:
@@ -90,12 +84,9 @@ class minSegmentTree:
     
 class maxSegmentTree:
     def __init__(self, arr):
-        N = self.nextPowerOf2(len(arr))
+        N = 1 if x == 0 else 2 ** ceil(log2(len(arr))
         self.segmentTree = [float('-inf')] * (2 * N - 1)
         self.constructTree(arr, 0, len(arr)-1, 0)
-    
-    def nextPowerOf2(self, x):
-        return 1 if x == 0 else 2**math.ceil(math.log2(x))
 
     def constructTree(self, arr, low, high, pos):
         if low == high:
