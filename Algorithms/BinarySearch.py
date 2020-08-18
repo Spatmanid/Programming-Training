@@ -15,7 +15,7 @@
 class Solution:
     def binarySearchIter(self, A, start, end, target):
         while start <= end:
-            mid = (start + end) // 2
+            mid = start + (end - start) // 2
             if A[mid] == target:
                 return mid
             elif A[mid] > target:
@@ -26,7 +26,7 @@ class Solution:
         
     def binarySearchRec(self, A, start, end, target):
         if start <= end:
-            mid = (start + end) // 2
+            mid = start + (end - start) // 2
             if A[mid] == target:
                 return mid
             elif A[mid] > target:
