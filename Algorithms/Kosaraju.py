@@ -32,35 +32,40 @@ class Kosaraju:
         self.graph[u].append(v)
         self.revgr[v].append(u)
     
-    def kosaraju(self):
-        res = []
-        stack = []
+    def kosaraju(self, edges):
+        def dfs(node):
+            for nei in self.graph[node]:
+                if nei not in visited:
+                    visited.add(nei)
+                    dfs(nei)
+            stack.append(node)
+        
+        def rev_dfs(node):
+            comp.append(str(node))
+            for nei in self.revgr[node]:
+                if nei not in visited:
+                    visited.add(nei)
+                    rev_dfs(nei)
+        
+	self.createGraph(edges)
+        stack, res = [], []
+	
         visited = set()
-        while self.V:
-            node = random.choice(tuple(self.V))
-            self.dfs(node, stack)
+        for v in self.vertices:
+            if v not in visited:
+                dfs(v)
+                
+        visited = set()
         while stack:
             v = stack.pop()
+            comp = []
             if v not in visited:
-                res.append(self.dfs_rev(v, visited, ''))
+                visited.add(v)
+                rev_dfs(v)
+            if comp:
+                res.append(''.join(comp))
+        
         return res
-        
-    def dfs(self, node, stack):
-        if node not in self.V:
-            return
-        self.V.remove(node)
-        for v in self.graph[node]:
-            self.dfs(v, stack)
-        stack.append(node)
-        
-    def dfs_rev(self, node, visited, cur):
-        if node in visited:
-            return cur
-        visited.add(node)
-        cur += str(node)
-        for v in self.revgr[node]:
-            cur = self.dfs_rev(v, visited, cur)
-        return cur
         
 def main():
 	kos = Kosaraju()
