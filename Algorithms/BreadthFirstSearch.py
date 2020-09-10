@@ -27,21 +27,23 @@ class Solution:
       self.vertices.add(v)
 
   def BFS(self):
+    def bfs_util(node):
+      visited.add(node)
+      queue = collections.deque([node])
+      while queue:
+        node = queue.popleft()
+        order.append(node)
+        for nei in self.graph[node]:
+          if nei not in visited:
+            visited.add(nei)
+            queue.append(nei)
+    
     visited = set()
-    queue = deque()
-    stack = []
-    for source in self.vertices:
-      if source not in visited:
-        queue.append(source)
-        visited.add(source)
-        while queue:
-          cur = queue.popleft()
-          stack.append(cur)
-          for node in self.graph[cur]:
-            if node not in visited:
-              queue.append(node)
-              visited.add(node)
-    print('->'.join(map(str,stack)))
+    order = []
+    for v in self.vertices:
+      if v not in visited:
+        bfs_util(v)
+    print('->'.join(map(str, order)))
       
 def main():
   edges = [ [0,1], [0,2], [0,4], [1,3], [2,3], [5,6]]
